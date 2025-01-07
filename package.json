@@ -1,0 +1,78 @@
+{
+  "name": "vscode-repomix",
+  "version": "1.0.0",
+  "displayName": "VSCode Repomix",
+  "description": "Pack selected files using Repomix for AI analysis",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "VSCode Repomix",
+      "properties": {
+        "vscode-repomix.claudesyncPath": {
+          "type": "string",
+          "default": "",
+          "description": "Custom path to the claudesync executable. Leave empty to use system PATH.",
+          "scope": "machine-overridable"
+        },
+        "vscode-repomix.repomixPath": {
+          "type": "string",
+          "default": "",
+          "description": "Custom path to the repomix executable. Leave empty to use system PATH.",
+          "scope": "machine-overridable"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "vscode-repomix.packOpenFiles",
+        "title": "Repomix: Pack Open Files"
+      },
+      {
+        "command": "vscode-repomix.packSelectedFiles",
+        "title": "Repomix: Pack Selected Files"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "vscode-repomix.packSelectedFiles",
+          "group": "repomix"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "vscode-repomix.packOpenFiles",
+          "group": "repomix"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "lint": "eslint src --ext ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/vscode": "^1.96.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "repomix": "^0.2.16"
+  }
+}
