@@ -39,7 +39,7 @@ If you have ClaudeSync configured:
 ## Requirements
 
 - Visual Studio Code version 1.60.0 or higher
-- [RepoMix](https://github.com/yamadashy/repomix) (installed automatically as a dependency)
+- [RepoMix](https://github.com/yamadashy/repomix) (required)
 - [ClaudeSync](https://github.com/jahwag/ClaudeSync) (optional)
 
 ## Configuration
