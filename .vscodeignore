@@ -1,0 +1,14 @@
+node_modules/
+src/
+tsconfig.json
+webpack.config.js
+.gitignore
+.claudeignore
+*.vsix
+repomix-instructions.md
+repomix-selection.xml
+repomix.config.json
+npm-debug.log
+*.tgz
+*.tar.gz
+.DS_Store

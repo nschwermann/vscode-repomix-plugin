@@ -15,12 +15,6 @@
     "configuration": {
       "title": "VSCode Repomix",
       "properties": {
-        "vscode-repomix.claudesyncPath": {
-          "type": "string",
-          "default": "",
-          "description": "Custom path to the claudesync executable. Leave empty to use system PATH.",
-          "scope": "machine-overridable"
-        },
         "vscode-repomix.repomixPath": {
           "type": "string",
           "default": "",
@@ -63,7 +57,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nschwermann/vscode-repomix-plugin"
+  },
   "devDependencies": {
     "@types/node": "^22.10.5",
     "@types/vscode": "^1.96.0",
