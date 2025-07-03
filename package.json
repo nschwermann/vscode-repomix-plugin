@@ -1,6 +1,6 @@
 {
   "name": "vscode-repomix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "VSCode Repomix",
   "description": "Pack selected files using Repomix for AI analysis",
   "engines": {
